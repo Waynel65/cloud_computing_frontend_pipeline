@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>CORS Test</title>
+    <script>
+      function testCORS() {
+        fetch('https://bgl0q3ljjg.execute-api.us-east-1.amazonaws.com/dev/search?query=abc')
+          .then((response) => response.json())
+          .then((data) => {
+            console.log('CORS success:', data);
+          })
+          .catch((error) => {
+            console.error('CORS error:', error);
+          });
+      }
+    </script>
+  </head>
+  <body>
+    <button onclick="testCORS()">Test CORS</button>
+  </body>
+</html>
