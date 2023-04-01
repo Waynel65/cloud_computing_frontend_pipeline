@@ -33,6 +33,7 @@ function uploadPhoto(file, labels) {
         redirect: 'follow'
     }).then(response => {
         if(response.ok){
+            console.log(response)
             alert('Photo uploaded successfully.');
         }else{
             alert('Photo failed to upload');
